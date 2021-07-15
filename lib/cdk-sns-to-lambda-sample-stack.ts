@@ -23,6 +23,6 @@ export class CdkSnsToLambdaSampleStack extends Stack {
       }
     })
 
-    const subscription = new LambdaSubscription(myFunc)
+    topic.addSubscription(new LambdaSubscription(myFunc))
   }
 }
