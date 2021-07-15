@@ -6,22 +6,32 @@
   },
   "scripts": {
     "build": "tsc",
+    "deploy": "npm run build && npx cdk deploy --require-approval never",
     "watch": "tsc -w",
     "test": "jest",
+    "upgrade": "npx npm-check-updates -u",
     "cdk": "cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.114.0",
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
+    "@types/aws-lambda": "^8.10.79",
+    "@types/jest": "^26.0.24",
+    "@types/node": "16.3.2",
     "aws-cdk": "1.114.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.1.0",
+    "typescript": "~4.3.5"
   },
   "dependencies": {
+    "@aws-cdk/aws-iam": "^1.114.0",
+    "@aws-cdk/aws-lambda": "^1.114.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.114.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.114.0",
+    "@aws-cdk/aws-logs": "^1.114.0",
+    "@aws-cdk/aws-sns": "^1.114.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.114.0",
     "@aws-cdk/core": "1.114.0",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.19"
   }
 }
